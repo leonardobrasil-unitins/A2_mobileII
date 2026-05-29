@@ -1,0 +1,8471 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:ecommerce >------------------------
+[INFO] Building ecommerce 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.1.1:run (default-cli) > test-compile @ ecommerce >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ecommerce ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ecommerce ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ecommerce ---
+[INFO] skip non existing resourceDirectory C:\Users\Leonardo\Faculdade\Programacao_para_Dispositivos_Moveis_II\mobile_2_A2\RESTful-E-Commerce-API-SpringBoot3\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ecommerce ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.1.1:run (default-cli) < test-compile @ ecommerce <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.1.1:run (default-cli) @ ecommerce ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.1)
+
+2026-05-26T12:04:49.406-03:00  INFO 1844 --- [           main] c.e.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 25.0.2 with PID 1844 (C:\Users\Leonardo\Faculdade\Programacao_para_Dispositivos_Moveis_II\mobile_2_A2\RESTful-E-Commerce-API-SpringBoot3\target\classes started by Leonardo in C:\Users\Leonardo\Faculdade\Programacao_para_Dispositivos_Moveis_II\mobile_2_A2\RESTful-E-Commerce-API-SpringBoot3)
+2026-05-26T12:04:49.408-03:00  INFO 1844 --- [           main] c.e.ecommerce.EcommerceApplication       : The following 1 profile is active: "test"
+2026-05-26T12:04:49.792-03:00  INFO 1844 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-26T12:04:49.840-03:00  INFO 1844 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/Leonardo/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.10/tomcat-embed-core-10.1.10.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-05-26T12:04:50.216-03:00  INFO 1844 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-05-26T12:04:50.224-03:00  INFO 1844 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-26T12:04:50.224-03:00  INFO 1844 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2026-05-26T12:04:50.297-03:00  INFO 1844 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-26T12:04:50.298-03:00  INFO 1844 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 855 ms
+2026-05-26T12:04:50.321-03:00  INFO 1844 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T12:04:50.451-03:00  INFO 1844 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-05-26T12:04:50.453-03:00  INFO 1844 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T12:04:50.461-03:00  INFO 1844 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-05-26T12:04:50.547-03:00  INFO 1844 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-26T12:04:50.583-03:00  INFO 1844 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2026-05-26T12:04:50.584-03:00  INFO 1844 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2026-05-26T12:04:50.665-03:00  INFO 1844 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2026-05-26T12:04:50.743-03:00  INFO 1844 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-26T12:04:50.938-03:00  INFO 1844 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2026-05-26T12:04:51.452-03:00  INFO 1844 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: 
+    drop table if exists categories cascade 
+Hibernate: 
+    drop table if exists order_items cascade 
+Hibernate: 
+    drop table if exists orders cascade 
+Hibernate: 
+    drop table if exists payments cascade 
+Hibernate: 
+    drop table if exists product_category cascade 
+Hibernate: 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    create table categories (
+        id bigint generated by default as identity,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table order_items (
+        price float(53),
+        quantity integer,
+        order_id bigint not null,
+        product_id bigint not null,
+        primary key (order_id, product_id)
+    )
+Hibernate: 
+    create table orders (
+        order_status integer,
+        client_id bigint,
+        id bigint generated by default as identity,
+        moment timestamp(6) with time zone,
+        primary key (id)
+    )
+Hibernate: 
+    create table payments (
+        moment timestamp(6) with time zone,
+        order_id bigint not null,
+        primary key (order_id)
+    )
+Hibernate: 
+    create table product_category (
+        category_id bigint not null,
+        product_id bigint not null,
+        primary key (category_id, product_id)
+    )
+Hibernate: 
+    create table products (
+        price float(53),
+        id bigint generated by default as identity,
+        description varchar(255),
+        img_url varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        password varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists order_items 
+       add constraint FKocimc7dtr037rh4ls4l95nlfi 
+       foreign key (product_id) 
+       references products
+Hibernate: 
+    alter table if exists order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders
+Hibernate: 
+    alter table if exists orders 
+       add constraint FKojjigrbyd7qrcwrxvr7e9bdr2 
+       foreign key (client_id) 
+       references users
+Hibernate: 
+    alter table if exists payments 
+       add constraint FK81gagumt0r8y3rmudcgpbk42l 
+       foreign key (order_id) 
+       references orders
+Hibernate: 
+    alter table if exists product_category 
+       add constraint FKdswxvx2nl2032yjv609r29sdr 
+       foreign key (category_id) 
+       references categories
+Hibernate: 
+    alter table if exists product_category 
+       add constraint FK5w81wp3eyugvi2lii94iao3fm 
+       foreign key (product_id) 
+       references products
+2026-05-26T12:04:51.507-03:00  INFO 1844 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26T12:04:52.014-03:00  INFO 1844 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-05-26T12:04:52.020-03:00  INFO 1844 --- [           main] c.e.ecommerce.EcommerceApplication       : Started EcommerceApplication in 2.873 seconds (process running for 3.111)
+Hibernate: 
+    insert 
+    into
+        users
+        (email,name,password,phone,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        users
+        (email,name,password,phone,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        categories
+        (name,id) 
+    values
+        (?,default)
+Hibernate: 
+    insert 
+    into
+        categories
+        (name,id) 
+    values
+        (?,default)
+Hibernate: 
+    insert 
+    into
+        categories
+        (name,id) 
+    values
+        (?,default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description,img_url,name,price,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description,img_url,name,price,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description,img_url,name,price,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description,img_url,name,price,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    insert 
+    into
+        products
+        (description,img_url,name,price,id) 
+    values
+        (?,?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        product_category
+        (product_id,category_id) 
+    values
+        (?,?)
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status,
+        p1_0.order_id,
+        p1_0.moment 
+    from
+        orders o1_0 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    left join
+        payments p1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=?
+Hibernate: 
+    insert 
+    into
+        payments
+        (moment,order_id) 
+    values
+        (?,?)
+2026-05-26T12:05:19.389-03:00  INFO 1844 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26T12:05:19.390-03:00  INFO 1844 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-26T12:05:19.391-03:00  INFO 1844 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (client_id,moment,order_status,id) 
+    values
+        (?,?,?,default)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        o1_0.order_id,
+        o2_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o2_0.moment,
+        o2_0.order_status,
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.product_id,
+        p2_0.id,
+        p2_0.description,
+        p2_0.img_url,
+        p2_0.name,
+        p2_0.price,
+        o1_0.price,
+        o1_0.quantity 
+    from
+        order_items o1_0 
+    left join
+        orders o2_0 
+            on o2_0.id=o1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o2_0.client_id 
+    left join
+        payments p1_0 
+            on o2_0.id=p1_0.order_id 
+    left join
+        products p2_0 
+            on p2_0.id=o1_0.product_id 
+    where
+        (
+            o1_0.order_id,o1_0.product_id
+        ) in ((?,?))
+Hibernate: 
+    insert 
+    into
+        order_items
+        (price,quantity,order_id,product_id) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.client_id,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        orders o1_0 
+    where
+        o1_0.client_id=? 
+    order by
+        o1_0.moment desc
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.phone 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        p1_0.order_id,
+        p1_0.moment,
+        o1_0.id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.phone,
+        o1_0.moment,
+        o1_0.order_status 
+    from
+        payments p1_0 
+    join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    left join
+        users c1_0 
+            on c1_0.id=o1_0.client_id 
+    where
+        p1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        c1_0.product_id,
+        c1_1.id,
+        c1_1.name 
+    from
+        product_category c1_0 
+    join
+        categories c1_1 
+            on c1_1.id=c1_0.category_id 
+    where
+        c1_0.product_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+Hibernate: 
+    select
+        i1_0.order_id,
+        i1_0.product_id,
+        p1_0.id,
+        p1_0.description,
+        p1_0.img_url,
+        p1_0.name,
+        p1_0.price,
+        i1_0.price,
+        i1_0.quantity 
+    from
+        order_items i1_0 
+    left join
+        products p1_0 
+            on p1_0.id=i1_0.product_id 
+    where
+        i1_0.order_id=?
+2026-05-26T23:43:42.071-03:00  WARN 1844 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h56m20s607ms511µs700ns).

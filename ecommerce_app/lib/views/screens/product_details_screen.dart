@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
 import 'package:ecommerce_app/controllers/product_details_controller.dart';
+import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
 import 'package:ecommerce_app/models/product_model.dart';
 import 'package:ecommerce_app/views/screens/cart_screen.dart';
@@ -11,10 +12,12 @@ class ProductDetailsScreen extends StatefulWidget {
     super.key,
     required this.product,
     required this.cartController,
+    required this.sessionController,
   });
 
   final ProductModel product;
   final CartController cartController;
+  final SessionController sessionController;
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -51,7 +54,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     if (openCartAfterAdd) {
       Navigator.of(context).push(
         MaterialPageRoute<void>(
-          builder: (_) => CartScreen(cartController: widget.cartController),
+          builder: (_) => CartScreen(
+            cartController: widget.cartController,
+            sessionController: widget.sessionController,
+          ),
         ),
       );
     }
@@ -60,7 +66,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   void _openCart() {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => CartScreen(cartController: widget.cartController),
+        builder: (_) => CartScreen(
+          cartController: widget.cartController,
+          sessionController: widget.sessionController,
+        ),
       ),
     );
   }

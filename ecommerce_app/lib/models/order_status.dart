@@ -16,3 +16,20 @@ enum OrderStatus {
     );
   }
 }
+
+extension OrderStatusLabel on OrderStatus {
+  String get label {
+    switch (this) {
+      case OrderStatus.waitingPayment:
+        return 'Aguardando pagamento';
+      case OrderStatus.paid:
+        return 'Pago';
+      case OrderStatus.shipped:
+        return 'Enviado';
+      case OrderStatus.delivered:
+        return 'Entregue';
+      case OrderStatus.canceled:
+        return 'Cancelado';
+    }
+  }
+}

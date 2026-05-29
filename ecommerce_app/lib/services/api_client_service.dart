@@ -54,9 +54,7 @@ class ApiClientService {
 
   Object? _decodeResponse(http.Response response) {
     if (response.statusCode < 200 || response.statusCode >= 300) {
-      throw AppException(
-        'A API respondeu com erro (${response.statusCode}).',
-      );
+      throw AppException(_extractErrorMessage(response));
     }
 
     if (response.body.isEmpty) {
@@ -64,6 +62,26 @@ class ApiClientService {
     }
 
     return jsonDecode(response.body);
+  }
+
+  String _extractErrorMessage(http.Response response) {
+    if (response.body.isNotEmpty) {
+      try {
+        final data = jsonDecode(response.body);
+
+        if (data is Map<String, dynamic>) {
+          final message = data['message'];
+
+          if (message is String && message.trim().isNotEmpty) {
+            return message;
+          }
+        }
+      } catch (_) {
+        // Fallback para a mensagem padrao abaixo.
+      }
+    }
+
+    return 'A API respondeu com erro (${response.statusCode}).';
   }
 
   Map<String, String> get _headers => const {

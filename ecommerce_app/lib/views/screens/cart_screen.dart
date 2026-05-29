@@ -1,6 +1,10 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
+import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
 import 'package:ecommerce_app/models/order_item_model.dart';
+import 'package:ecommerce_app/models/order_model.dart';
+import 'package:ecommerce_app/views/screens/checkout_screen.dart';
+import 'package:ecommerce_app/views/screens/orders_screen.dart';
 import 'package:ecommerce_app/views/widgets/product_image_artwork.dart';
 import 'package:flutter/material.dart';
 
@@ -8,15 +12,53 @@ class CartScreen extends StatelessWidget {
   const CartScreen({
     super.key,
     required this.cartController,
+    required this.sessionController,
+    this.onOpenOrders,
+    this.onCheckoutCompleted,
   });
 
   final CartController cartController;
+  final SessionController sessionController;
+  final VoidCallback? onOpenOrders;
+  final Future<void> Function(OrderModel order)? onCheckoutCompleted;
+
+  Future<void> _openCheckout(BuildContext context) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => CheckoutScreen(
+          cartController: cartController,
+          sessionController: sessionController,
+          onCheckoutCompleted: onCheckoutCompleted,
+        ),
+      ),
+    );
+  }
+
+  void _openOrders(BuildContext context) {
+    if (onOpenOrders != null) {
+      onOpenOrders!();
+      return;
+    }
+
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => OrdersScreen(sessionController: sessionController),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Meu carrinho'),
+        actions: [
+          IconButton(
+            tooltip: 'Meus pedidos',
+            onPressed: () => _openOrders(context),
+            icon: const Icon(Icons.receipt_long_outlined),
+          ),
+        ],
       ),
       body: AnimatedBuilder(
         animation: cartController,
@@ -38,6 +80,7 @@ class CartScreen extends StatelessWidget {
                     final item = cartController.items[index];
                     return _CartItemCard(
                       item: item,
+                      isBusy: cartController.isLoading,
                       onIncrease: () => cartController.increaseQuantity(item),
                       onDecrease: () => cartController.decreaseQuantity(item),
                       onRemove: () => cartController.removeItem(item),
@@ -71,12 +114,38 @@ class CartScreen extends StatelessWidget {
                           value: _formatPrice(cartController.totalAmount),
                           emphasize: true,
                         ),
+                        if (cartController.errorMessage != null) ...[
+                          const SizedBox(height: AppStyle.spacingMd),
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(AppStyle.spacingMd),
+                            decoration: BoxDecoration(
+                              color: AppStyle.errorColor.withValues(alpha: 0.08),
+                              borderRadius: BorderRadius.circular(
+                                AppStyle.radiusMedium,
+                              ),
+                              border: Border.all(
+                                color: AppStyle.errorColor.withValues(
+                                  alpha: 0.18,
+                                ),
+                              ),
+                            ),
+                            child: Text(
+                              cartController.errorMessage!,
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                color: AppStyle.errorColor,
+                              ),
+                            ),
+                          ),
+                        ],
                         const SizedBox(height: AppStyle.spacingLg),
                         SizedBox(
                           width: double.infinity,
                           child: FilledButton(
-                            onPressed: () {},
-                            child: const Text('Finalizar compra'),
+                            onPressed: cartController.isLoading
+                                ? null
+                                : () => _openCheckout(context),
+                            child: const Text('Ir para checkout'),
                           ),
                         ),
                       ],
@@ -100,12 +169,14 @@ class CartScreen extends StatelessWidget {
 class _CartItemCard extends StatelessWidget {
   const _CartItemCard({
     required this.item,
+    required this.isBusy,
     required this.onIncrease,
     required this.onDecrease,
     required this.onRemove,
   });
 
   final OrderItemModel item;
+  final bool isBusy;
   final VoidCallback onIncrease;
   final VoidCallback onDecrease;
   final VoidCallback onRemove;
@@ -137,7 +208,9 @@ class _CartItemCard extends StatelessWidget {
                   Text(item.product.name, style: textTheme.titleMedium),
                   const SizedBox(height: AppStyle.spacingXs),
                   Text(
-                    item.product.categories.map((category) => category.name).join(', '),
+                    item.product.categories
+                        .map((category) => category.name)
+                        .join(', '),
                     style: textTheme.bodyMedium,
                   ),
                   const SizedBox(height: AppStyle.spacingSm),
@@ -152,7 +225,7 @@ class _CartItemCard extends StatelessWidget {
                     children: [
                       _QuantityButton(
                         icon: Icons.remove_rounded,
-                        onPressed: onDecrease,
+                        onPressed: isBusy ? null : onDecrease,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
@@ -165,11 +238,11 @@ class _CartItemCard extends StatelessWidget {
                       ),
                       _QuantityButton(
                         icon: Icons.add_rounded,
-                        onPressed: onIncrease,
+                        onPressed: isBusy ? null : onIncrease,
                       ),
                       const Spacer(),
                       TextButton(
-                        onPressed: onRemove,
+                        onPressed: isBusy ? null : onRemove,
                         child: const Text('Remover'),
                       ),
                     ],
@@ -196,7 +269,7 @@ class _QuantityButton extends StatelessWidget {
   });
 
   final IconData icon;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

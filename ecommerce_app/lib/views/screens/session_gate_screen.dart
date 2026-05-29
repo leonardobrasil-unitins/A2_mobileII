@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
 import 'package:ecommerce_app/controllers/session_controller.dart';
-import 'package:ecommerce_app/views/screens/home_screen.dart';
 import 'package:ecommerce_app/views/screens/login_screen.dart';
+import 'package:ecommerce_app/views/screens/main_navigation_screen.dart';
 import 'package:flutter/material.dart';
 
 class SessionGateScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _SessionGateScreenState extends State<SessionGateScreen> {
         }
 
         if (widget.sessionController.isAuthenticated) {
-          return HomeScreen(
+          return MainNavigationScreen(
             sessionController: widget.sessionController,
             cartController: widget.cartController,
           );

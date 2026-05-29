@@ -1,14 +1,21 @@
 import 'package:ecommerce_app/controllers/base_controller.dart';
+import 'package:ecommerce_app/core/errors/app_exception.dart';
 import 'package:ecommerce_app/models/order_item_model.dart';
+import 'package:ecommerce_app/models/order_model.dart';
 import 'package:ecommerce_app/models/product_model.dart';
 import 'package:ecommerce_app/models/user_model.dart';
 import 'package:ecommerce_app/services/cart_service.dart';
+import 'package:ecommerce_app/services/order_service.dart';
 
 class CartController extends BaseController {
-  CartController({CartService? cartService})
-      : _cartService = cartService ?? CartService();
+  CartController({
+    CartService? cartService,
+    OrderService? orderService,
+  })  : _cartService = cartService ?? CartService(),
+        _orderService = orderService ?? OrderService();
 
   final CartService _cartService;
+  final OrderService _orderService;
 
   int? _userId;
   List<OrderItemModel> _items = const [];
@@ -103,6 +110,37 @@ class CartController extends BaseController {
     _items = const [];
     notifyListeners();
     await _cartService.clearCart(userId: _userId!);
+  }
+
+  Future<OrderModel?> checkout({required UserModel user}) async {
+    if (_userId == null || _userId != user.id) {
+      setErrorMessage('Sua sessao precisa estar ativa para finalizar a compra.');
+      return null;
+    }
+
+    if (_items.isEmpty) {
+      setErrorMessage('Seu carrinho esta vazio.');
+      return null;
+    }
+
+    setErrorMessage(null);
+    setLoading(true);
+
+    try {
+      final order = await _orderService.checkout(user: user, items: _items);
+      _items = const [];
+      notifyListeners();
+      await _cartService.clearCart(userId: _userId!);
+      return order;
+    } on AppException catch (error) {
+      setErrorMessage(error.message);
+      return null;
+    } catch (_) {
+      setErrorMessage('Nao foi possivel finalizar a compra.');
+      return null;
+    } finally {
+      setLoading(false);
+    }
   }
 
   Future<void> _updateQuantity({

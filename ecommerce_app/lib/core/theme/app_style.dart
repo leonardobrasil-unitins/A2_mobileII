@@ -166,6 +166,27 @@ class AppStyle {
         borderRadius: BorderRadius.circular(999),
       ),
     ),
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: surfaceColor,
+      indicatorColor: primaryColor.withValues(alpha: 0.12),
+      height: 82,
+      surfaceTintColor: Colors.transparent,
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        final isSelected = states.contains(WidgetState.selected);
+        return TextStyle(
+          fontSize: 12,
+          fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+          color: isSelected ? primaryColor : textSecondaryColor,
+        );
+      }),
+      iconTheme: WidgetStateProperty.resolveWith((states) {
+        final isSelected = states.contains(WidgetState.selected);
+        return IconThemeData(
+          color: isSelected ? primaryColor : textSecondaryColor,
+          size: 24,
+        );
+      }),
+    ),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
         fontSize: 44,

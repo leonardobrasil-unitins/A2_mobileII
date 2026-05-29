@@ -7,6 +7,7 @@ import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
 import 'package:ecommerce_app/models/product_model.dart';
 import 'package:ecommerce_app/views/screens/cart_screen.dart';
+import 'package:ecommerce_app/views/screens/orders_screen.dart';
 import 'package:ecommerce_app/views/screens/product_details_screen.dart';
 import 'package:ecommerce_app/views/widgets/product_carousel_card.dart';
 import 'package:ecommerce_app/views/widgets/product_image_artwork.dart';
@@ -17,10 +18,16 @@ class HomeScreen extends StatefulWidget {
     super.key,
     required this.sessionController,
     required this.cartController,
+    this.onOpenCart,
+    this.onOpenOrders,
+    this.onOpenProfile,
   });
 
   final SessionController sessionController;
   final CartController cartController;
+  final VoidCallback? onOpenCart;
+  final VoidCallback? onOpenOrders;
+  final VoidCallback? onOpenProfile;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -37,15 +44,39 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (_) => ProductDetailsScreen(
           product: product,
           cartController: widget.cartController,
+          sessionController: widget.sessionController,
         ),
       ),
     );
   }
 
   void _openCart() {
+    if (widget.onOpenCart != null) {
+      widget.onOpenCart!();
+      return;
+    }
+
     Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => CartScreen(cartController: widget.cartController),
+        builder: (_) => CartScreen(
+          cartController: widget.cartController,
+          sessionController: widget.sessionController,
+        ),
+      ),
+    );
+  }
+
+  void _openOrders() {
+    if (widget.onOpenOrders != null) {
+      widget.onOpenOrders!();
+      return;
+    }
+
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => OrdersScreen(
+          sessionController: widget.sessionController,
+        ),
       ),
     );
   }
@@ -118,52 +149,65 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Pulse Shop'),
         actions: [
+          if (widget.onOpenProfile != null)
+            IconButton(
+              tooltip: 'Perfil',
+              onPressed: widget.onOpenProfile,
+              icon: const Icon(Icons.person_outline_rounded),
+            )
+          else
+            IconButton(
+              tooltip: 'Meus pedidos',
+              onPressed: _openOrders,
+              icon: const Icon(Icons.receipt_long_outlined),
+            ),
           IconButton(
             tooltip: 'Sair',
             onPressed: widget.sessionController.signOut,
             icon: const Icon(Icons.logout_rounded),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: AppStyle.spacingMd),
-            child: AnimatedBuilder(
-              animation: widget.cartController,
-              builder: (context, _) {
-                return Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    IconButton(
-                      tooltip: 'Carrinho',
-                      onPressed: _openCart,
-                      icon: const Icon(Icons.shopping_bag_outlined),
-                    ),
-                    if (widget.cartController.totalItems > 0)
-                      Positioned(
-                        right: -2,
-                        top: -2,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 6,
-                            vertical: 2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppStyle.accentColor,
-                            borderRadius: BorderRadius.circular(999),
-                          ),
-                          child: Text(
-                            '${widget.cartController.totalItems}',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w800,
+          if (widget.onOpenProfile == null)
+            Padding(
+              padding: const EdgeInsets.only(right: AppStyle.spacingMd),
+              child: AnimatedBuilder(
+                animation: widget.cartController,
+                builder: (context, _) {
+                  return Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      IconButton(
+                        tooltip: 'Carrinho',
+                        onPressed: _openCart,
+                        icon: const Icon(Icons.shopping_bag_outlined),
+                      ),
+                      if (widget.cartController.totalItems > 0)
+                        Positioned(
+                          right: -2,
+                          top: -2,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 6,
+                              vertical: 2,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppStyle.accentColor,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            child: Text(
+                              '${widget.cartController.totalItems}',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                  ],
-                );
-              },
+                    ],
+                  );
+                },
+              ),
             ),
-          ),
         ],
       ),
       body: AnimatedBuilder(
