@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
+import 'package:ecommerce_app/controllers/favorites_controller.dart';
 import 'package:ecommerce_app/controllers/profile_controller.dart';
 import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
@@ -11,16 +12,20 @@ class ProfileScreen extends StatefulWidget {
     super.key,
     required this.sessionController,
     required this.cartController,
+    required this.favoritesController,
     this.refreshSignal = 0,
     this.onOpenCart,
     this.onOpenOrders,
+    this.onOpenFavorites,
   });
 
   final SessionController sessionController;
   final CartController cartController;
+  final FavoritesController favoritesController;
   final int refreshSignal;
   final VoidCallback? onOpenCart;
   final VoidCallback? onOpenOrders;
+  final VoidCallback? onOpenFavorites;
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -102,6 +107,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         animation: Listenable.merge([
           _controller,
           widget.cartController,
+          widget.favoritesController,
         ]),
         builder: (context, _) {
           if (currentUser == null) {
@@ -144,9 +150,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Expanded(
                       child: _StatCard(
-                        label: 'Carrinho',
-                        value: '${widget.cartController.totalItems}',
-                        icon: Icons.shopping_bag_outlined,
+                        label: 'Favoritos',
+                        value: '${widget.favoritesController.totalFavorites}',
+                        icon: Icons.favorite_border_rounded,
                       ),
                     ),
                     const SizedBox(width: AppStyle.spacingMd),
@@ -177,6 +183,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           subtitle:
                               'Continue de onde parou e revise seus itens.',
                           onTap: _openCart,
+                        ),
+                        const SizedBox(height: AppStyle.spacingSm),
+                        _ProfileActionTile(
+                          icon: Icons.favorite_border_rounded,
+                          title: 'Ver favoritos',
+                          subtitle:
+                              'Produtos salvos e sincronizados no Supabase.',
+                          onTap: widget.onOpenFavorites ?? () {},
                         ),
                         const SizedBox(height: AppStyle.spacingSm),
                         _ProfileActionTile(

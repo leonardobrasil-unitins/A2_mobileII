@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 enum MainTab {
   home,
   cart,
+  favorites,
   orders,
   profile;
 }

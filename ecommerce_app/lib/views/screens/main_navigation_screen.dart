@@ -1,9 +1,11 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
+import 'package:ecommerce_app/controllers/favorites_controller.dart';
 import 'package:ecommerce_app/controllers/main_navigation_controller.dart';
 import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
 import 'package:ecommerce_app/models/order_model.dart';
 import 'package:ecommerce_app/views/screens/cart_screen.dart';
+import 'package:ecommerce_app/views/screens/favorites_screen.dart';
 import 'package:ecommerce_app/views/screens/home_screen.dart';
 import 'package:ecommerce_app/views/screens/orders_screen.dart';
 import 'package:ecommerce_app/views/screens/profile_screen.dart';
@@ -14,11 +16,13 @@ class MainNavigationScreen extends StatefulWidget {
     super.key,
     required this.sessionController,
     required this.cartController,
+    required this.favoritesController,
     this.navigationController,
   });
 
   final SessionController sessionController;
   final CartController cartController;
+  final FavoritesController favoritesController;
   final MainNavigationController? navigationController;
 
   @override
@@ -81,6 +85,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         return HomeScreen(
           sessionController: widget.sessionController,
           cartController: widget.cartController,
+          favoritesController: widget.favoritesController,
           onOpenCart: () => _selectTab(MainTab.cart),
           onOpenOrders: () => _selectTab(MainTab.orders),
           onOpenProfile: () => _selectTab(MainTab.profile),
@@ -91,6 +96,12 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           sessionController: widget.sessionController,
           onOpenOrders: () => _selectTab(MainTab.orders),
           onCheckoutCompleted: _handleCheckoutCompleted,
+        );
+      case MainTab.favorites:
+        return FavoritesScreen(
+          sessionController: widget.sessionController,
+          cartController: widget.cartController,
+          favoritesController: widget.favoritesController,
         );
       case MainTab.orders:
         return OrdersScreen(
@@ -103,9 +114,11 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         return ProfileScreen(
           sessionController: widget.sessionController,
           cartController: widget.cartController,
+          favoritesController: widget.favoritesController,
           refreshSignal: _profileRefreshSignal,
           onOpenCart: () => _selectTab(MainTab.cart),
           onOpenOrders: () => _selectTab(MainTab.orders),
+          onOpenFavorites: () => _selectTab(MainTab.favorites),
         );
     }
   }
@@ -116,6 +129,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       animation: Listenable.merge([
         _navigationController,
         widget.cartController,
+        widget.favoritesController,
       ]),
       builder: (context, _) {
         return Scaffold(
@@ -146,6 +160,22 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                   selected: true,
                 ),
                 label: 'Carrinho',
+              ),
+              NavigationDestination(
+                icon: _NavigationIconBadge(
+                  icon: Icons.favorite_border_rounded,
+                  selectedIcon: Icons.favorite_rounded,
+                  count: widget.favoritesController.totalFavorites,
+                  selected:
+                      _navigationController.currentTab == MainTab.favorites,
+                ),
+                selectedIcon: _NavigationIconBadge(
+                  icon: Icons.favorite_border_rounded,
+                  selectedIcon: Icons.favorite_rounded,
+                  count: widget.favoritesController.totalFavorites,
+                  selected: true,
+                ),
+                label: 'Favoritos',
               ),
               const NavigationDestination(
                 icon: Icon(Icons.receipt_long_outlined),

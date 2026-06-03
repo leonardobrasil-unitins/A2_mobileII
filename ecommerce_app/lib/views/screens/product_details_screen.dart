@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controllers/cart_controller.dart';
+import 'package:ecommerce_app/controllers/favorites_controller.dart';
 import 'package:ecommerce_app/controllers/product_details_controller.dart';
 import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
@@ -13,11 +14,13 @@ class ProductDetailsScreen extends StatefulWidget {
     required this.product,
     required this.cartController,
     required this.sessionController,
+    this.favoritesController,
   });
 
   final ProductModel product;
   final CartController cartController;
   final SessionController sessionController;
+  final FavoritesController? favoritesController;
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -74,6 +77,27 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
+  Future<void> _toggleFavorite(ProductModel product) async {
+    final favoritesController = widget.favoritesController;
+
+    if (favoritesController == null) {
+      return;
+    }
+
+    await favoritesController.toggleFavorite(
+      user: widget.sessionController.currentUser,
+      product: product,
+    );
+
+    if (!mounted || favoritesController.errorMessage == null) {
+      return;
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(favoritesController.errorMessage!)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,6 +105,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         animation: Listenable.merge([
           _controller,
           widget.cartController,
+          if (widget.favoritesController != null) widget.favoritesController!,
         ]),
         builder: (context, _) {
           final product = _controller.product;
@@ -95,6 +120,21 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 backgroundColor: AppStyle.backgroundColor,
                 foregroundColor: AppStyle.textPrimaryColor,
                 actions: [
+                  if (widget.favoritesController != null)
+                    IconButton(
+                      tooltip: widget.favoritesController!.isFavorite(product.id)
+                          ? 'Remover dos favoritos'
+                          : 'Salvar nos favoritos',
+                      onPressed: () => _toggleFavorite(product),
+                      icon: Icon(
+                        widget.favoritesController!.isFavorite(product.id)
+                            ? Icons.favorite_rounded
+                            : Icons.favorite_border_rounded,
+                        color: widget.favoritesController!.isFavorite(product.id)
+                            ? AppStyle.accentColor
+                            : null,
+                      ),
+                    ),
                   Padding(
                     padding: const EdgeInsets.only(right: AppStyle.spacingMd),
                     child: Stack(

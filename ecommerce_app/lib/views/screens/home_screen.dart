@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_app/controllers/cart_controller.dart';
+import 'package:ecommerce_app/controllers/favorites_controller.dart';
 import 'package:ecommerce_app/controllers/home_controller.dart';
 import 'package:ecommerce_app/controllers/session_controller.dart';
 import 'package:ecommerce_app/core/theme/app_style.dart';
@@ -18,6 +19,7 @@ class HomeScreen extends StatefulWidget {
     super.key,
     required this.sessionController,
     required this.cartController,
+    this.favoritesController,
     this.onOpenCart,
     this.onOpenOrders,
     this.onOpenProfile,
@@ -25,6 +27,7 @@ class HomeScreen extends StatefulWidget {
 
   final SessionController sessionController;
   final CartController cartController;
+  final FavoritesController? favoritesController;
   final VoidCallback? onOpenCart;
   final VoidCallback? onOpenOrders;
   final VoidCallback? onOpenProfile;
@@ -45,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           product: product,
           cartController: widget.cartController,
           sessionController: widget.sessionController,
+          favoritesController: widget.favoritesController,
         ),
       ),
     );
@@ -92,6 +96,27 @@ class _HomeScreenState extends State<HomeScreen> {
       SnackBar(
         content: Text('${product.name} foi adicionado ao carrinho.'),
       ),
+    );
+  }
+
+  Future<void> _toggleFavorite(ProductModel product) async {
+    final favoritesController = widget.favoritesController;
+
+    if (favoritesController == null) {
+      return;
+    }
+
+    await favoritesController.toggleFavorite(
+      user: widget.sessionController.currentUser,
+      product: product,
+    );
+
+    if (!mounted || favoritesController.errorMessage == null) {
+      return;
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(favoritesController.errorMessage!)),
     );
   }
 
@@ -211,7 +236,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: AnimatedBuilder(
-        animation: _controller,
+        animation: widget.favoritesController == null
+            ? _controller
+            : Listenable.merge([
+                _controller,
+                widget.favoritesController!,
+              ]),
         builder: (context, _) {
           if (_controller.isLoading && _controller.featuredProducts.isEmpty) {
             return const _HomeLoadingView();
@@ -286,7 +316,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: GestureDetector(
                           onTap: () => _openProductDetails(product),
-                          child: ProductCarouselCard(product: product),
+                          child: ProductCarouselCard(
+                            product: product,
+                            isFavorite: widget.favoritesController
+                                    ?.isFavorite(product.id) ??
+                                false,
+                            onToggleFavorite:
+                                widget.favoritesController == null
+                                    ? null
+                                    : () => _toggleFavorite(product),
+                          ),
                         ),
                       );
                     },
@@ -312,6 +351,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         product: product,
                         onTap: () => _openProductDetails(product),
                         onAddToCart: () => _addToCart(product),
+                        isFavorite:
+                            widget.favoritesController?.isFavorite(product.id) ??
+                                false,
+                        onToggleFavorite: widget.favoritesController == null
+                            ? null
+                            : () => _toggleFavorite(product),
                       ),
                     ),
                   ),
@@ -384,11 +429,15 @@ class _ProductResultCard extends StatelessWidget {
     required this.product,
     required this.onTap,
     required this.onAddToCart,
+    required this.isFavorite,
+    this.onToggleFavorite,
   });
 
   final ProductModel product;
   final VoidCallback onTap;
   final VoidCallback onAddToCart;
+  final bool isFavorite;
+  final VoidCallback? onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -427,7 +476,27 @@ class _ProductResultCard extends StatelessWidget {
                           .toList(),
                     ),
                     const SizedBox(height: AppStyle.spacingSm),
-                    Text(product.name, style: textTheme.titleLarge),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Text(product.name, style: textTheme.titleLarge),
+                        ),
+                        if (onToggleFavorite != null)
+                          IconButton(
+                            tooltip: isFavorite
+                                ? 'Remover dos favoritos'
+                                : 'Salvar nos favoritos',
+                            onPressed: onToggleFavorite,
+                            icon: Icon(
+                              isFavorite
+                                  ? Icons.favorite_rounded
+                                  : Icons.favorite_border_rounded,
+                              color: isFavorite ? AppStyle.accentColor : null,
+                            ),
+                          ),
+                      ],
+                    ),
                     const SizedBox(height: AppStyle.spacingXs),
                     Text(
                       product.description,

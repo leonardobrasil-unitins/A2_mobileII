@@ -7,9 +7,13 @@ class ProductCarouselCard extends StatelessWidget {
   const ProductCarouselCard({
     super.key,
     required this.product,
+    this.isFavorite = false,
+    this.onToggleFavorite,
   });
 
   final ProductModel product;
+  final bool isFavorite;
+  final VoidCallback? onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +45,22 @@ class ProductCarouselCard extends StatelessWidget {
                 ),
               ),
             ),
+            if (onToggleFavorite != null)
+              Positioned(
+                right: AppStyle.spacingMd,
+                top: AppStyle.spacingMd,
+                child: IconButton.filledTonal(
+                  tooltip: isFavorite
+                      ? 'Remover dos favoritos'
+                      : 'Salvar nos favoritos',
+                  onPressed: onToggleFavorite,
+                  icon: Icon(
+                    isFavorite
+                        ? Icons.favorite_rounded
+                        : Icons.favorite_border_rounded,
+                  ),
+                ),
+              ),
             Padding(
               padding: const EdgeInsets.all(AppStyle.spacingLg),
               child: Column(
